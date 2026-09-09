@@ -1,0 +1,22 @@
+:root {
+  font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+  color: #283c31;
+  background: #fbfaf6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #243e30;
+  --navy: #204e3b;
+  --teal: #296448;
+  --teal-dark: #194b34;
+  --muted: #566459;
+  --line: #dfe3d8;
+  --pale: #edf2e6;
+  --paper: #f5f4ed;
+  --lime: #e0edb8;
+  --peach: #f4dccb;
+  --lilac: #e7e0f1;
+  --focus: #a33c12;
+  --container: 1280px;
+  --section-space: 100px;
+}

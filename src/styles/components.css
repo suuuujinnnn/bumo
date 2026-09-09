@@ -1,0 +1,232 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  min-height: 54px;
+  padding: 13px 25px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.button-primary {
+  color: white;
+  background: var(--teal);
+}
+.button-primary:hover {
+  color: white;
+  background: var(--teal-dark);
+}
+.button-secondary {
+  color: var(--navy);
+  border-color: #73898c;
+  background: white;
+}
+.button-secondary:hover {
+  color: var(--navy);
+  background: var(--pale);
+}
+.icon-button {
+  border-radius: 50%;
+  border: 0;
+  background: transparent;
+  width: 48px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.icon-button:hover {
+  background: var(--pale);
+}
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-height: 44px;
+}
+.text-link .icon {
+  width: 19px;
+  height: 19px;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.section-heading > .text-link {
+  flex-shrink: 0;
+}
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+.sample-label {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #a5b4b5;
+  padding: 0 6px;
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #53666c;
+  line-height: 1.65;
+  vertical-align: middle;
+}
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  line-height: 1.6;
+  border-radius: 100px;
+}
+.is-open {
+  color: #076254;
+  background: #e3f1e9;
+}
+.is-upcoming {
+  color: #65501b;
+  background: #f6efdc;
+}
+.is-closed {
+  color: #536168;
+  background: #ecefee;
+}
+.item-labels {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+.category-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+.small-meta,
+.content-meta {
+  font-size: 0.73rem;
+  color: var(--muted);
+}
+.content-meta {
+  display: flex;
+  gap: 8px 22px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.breadcrumbs {
+  padding-block: 26px;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.breadcrumbs li:not(:first-child)::before {
+  content: '/';
+  margin-right: 12px;
+  color: #7b898b;
+}
+.breadcrumbs a {
+  display: inline-block;
+  padding-block: 6px;
+}
+.search-dialog {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  padding: 32px;
+  width: min(540px, calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  color: var(--ink);
+  background: white;
+  box-shadow: 0 24px 80px #102b3633;
+}
+.search-dialog::backdrop {
+  background: #122d3bd1;
+}
+.dialog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.dialog-heading .eyebrow {
+  margin: 0;
+}
+.search-dialog h2 {
+  margin-block: 16px 8px;
+}
+.search-dialog > p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.search-destinations {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.search-destinations a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.search-destinations a .icon:last-child {
+  margin-left: auto;
+}
+.empty-state {
+  text-align: center;
+  padding: 64px 16px;
+  background: var(--paper);
+}
+.empty-state > .icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 22px;
+}
+.empty-state h2 {
+  font-size: 1.3rem;
+}
+.empty-state p {
+  color: var(--muted);
+  margin-block: 12px 22px;
+}
+.pending-note {
+  border-left: 3px solid #98aaa4;
+  padding: 15px 20px;
+  background: var(--paper);
+  font-size: 0.86rem;
+  color: #52625e;
+}
+@media (max-width: 767px) {
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .text-link {
+    gap: 10px;
+  }
+  .search-dialog {
+    padding: 22px;
+  }
+}
