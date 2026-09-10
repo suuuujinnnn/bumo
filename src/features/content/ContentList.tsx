@@ -34,9 +34,9 @@ export function ContentItem({
           <SampleLabel />
           {entry.status && <StatusBadge status={entry.status} />}
         </div>
-        <h2>
+        <h3>
           <Link to={`/${entry.area}/${entry.id}${search}`}>{entry.title}</Link>
-        </h2>
+        </h3>
         <p className="item-summary">{entry.summary}</p>
         <ContentMeta entry={entry} />
       </div>

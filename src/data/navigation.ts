@@ -52,38 +52,10 @@ export function stageLink(stage: LifeStage) {
   return `/support?stage=${encodeURIComponent(stage)}`;
 }
 export const navigation: NavigationItem[] = [
-  {
-    label: '부모연대 소개',
-    to: '/about',
-    children: [
-      { label: '비전과 가치', to: '/about#values' },
-      { label: '연혁', to: '/about#history' },
-      { label: '조직', to: '/about#organization' },
-      { label: '지역 부모연대', to: '/local' },
-      { label: '오시는 길', to: '/local#directions' },
-    ],
-  },
-  ...(['activities', 'support', 'news', 'resources'] as const).map((area) => ({
-    label: {
-      activities: '활동',
-      support: '지원정보',
-      news: '소식',
-      resources: '자료',
-    }[area],
-    to: `/${area}`,
-    children: categories[area].map((category) => ({
-      label: category,
-      to: categoryLink(area, category),
-    })),
-  })),
-  {
-    label: '함께하기',
-    to: '/participate',
-    children: [
-      { label: '회원가입', to: '/participate#membership' },
-      { label: '후원', to: '/participate#donation' },
-      { label: '캠페인 참여', to: '/participate#campaign' },
-      { label: '자원활동', to: '/participate#volunteer' },
-    ],
-  },
+  { label: '부모연대 소개', to: '/about' },
+  { label: '활동', to: '/activities' },
+  { label: '지원정보', to: '/support' },
+  { label: '소식', to: '/news' },
+  { label: '자료', to: '/resources' },
+  { label: '함께하기', to: '/participate' },
 ];

@@ -49,7 +49,7 @@ export function SearchPanel({
         {[
           { label: '지원정보 찾기', to: '/support', icon: 'book' },
           { label: '정책·교육 자료 찾기', to: '/resources', icon: 'file' },
-          { label: '의정부 부모연대 안내', to: '/local', icon: 'pin' },
+          { label: '부모연대 소개', to: '/about', icon: 'pin' },
         ].map(({ label, to, icon }) => (
           <Link key={to} to={to} onClick={close}>
             <Icon name={icon as 'book' | 'file' | 'pin'} />

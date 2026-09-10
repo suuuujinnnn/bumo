@@ -10,6 +10,8 @@ import {
 import { Icon } from '../components/ui/Icon';
 import { ContentMeta, RelatedContent } from '../features/content/ContentList';
 import { NotFoundPage } from './NotFoundPage';
+import { ActivityMedia } from '../features/content/ActivityGrid';
+import { getSupportInfo } from '../data/support';
 
 export function DetailPage({ area }: { area: ContentArea }) {
   const { id } = useParams();
@@ -22,12 +24,12 @@ export function DetailPage({ area }: { area: ContentArea }) {
       <NotFoundPage to={backTo} label={`${areaInfo[area].eyebrow} 목록으로`} />
     );
   return (
-    <div className="container interior-page detail-page">
+    <div className={`container interior-page detail-page detail-${area}`}>
       <Breadcrumbs
         current="상세 정보"
         parent={{ title: areaInfo[area].eyebrow, to: backTo }}
       />
-      <article>
+      <article className="detail-article">
         <header className="detail-heading">
           <div className="item-labels">
             <span className="category-label">{entry.category}</span>
@@ -38,17 +40,55 @@ export function DetailPage({ area }: { area: ContentArea }) {
           <p className="detail-summary">{entry.summary}</p>
           <ContentMeta entry={entry} />
         </header>
+        {area === 'activities' && (
+          <div className="detail-photo">
+            <ActivityMedia entry={entry} />
+          </div>
+        )}
         <p className="sample-notice">
           <SampleLabel /> 이 글과 일정은 예시입니다. 실제 사업·행사·지원 안내가
           아닙니다.
         </p>
         <div className="article-body">
-          {entry.body.map((block) => (
-            <section key={block.heading}>
-              <h2>{block.heading}</h2>
-              <p>{block.text}</p>
-            </section>
-          ))}
+          {area === 'support' && (
+            <>
+              <section className="support-overview">
+                <h2>한눈에 보는 안내</h2>
+                <dl className="support-facts">
+                  <div>
+                    <dt>이런 분께</dt>
+                    <dd>{getSupportInfo(entry).audience}</dd>
+                  </div>
+                  <div>
+                    <dt>알아볼 내용</dt>
+                    <dd>{getSupportInfo(entry).learn}</dd>
+                  </div>
+                  <div>
+                    <dt>다음 단계</dt>
+                    <dd>질문을 정리한 뒤 상담·문의 안내 확인</dd>
+                  </div>
+                </dl>
+              </section>
+              <section>
+                <h2>이 질문부터 생각해 보세요</h2>
+                <ol className="preparation-steps">
+                  {getSupportInfo(entry).questions.map((question, index) => (
+                    <li key={question}>
+                      <span>{index + 1}</span>
+                      <p>{question}</p>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+            </>
+          )}
+          {area !== 'support' &&
+            entry.body.map((block) => (
+              <section key={block.heading}>
+                <h2>{block.heading}</h2>
+                <p>{block.text}</p>
+              </section>
+            ))}
           {area === 'resources' && (
             <section className="attachment-notice">
               <h2>첨부자료 안내</h2>
@@ -75,12 +115,12 @@ export function DetailPage({ area }: { area: ContentArea }) {
               to={
                 area === 'activities'
                   ? '/participate#campaign'
-                  : '/local#contact'
+                  : '/about#contact'
               }
             >
               {area === 'activities'
                 ? '캠페인 참여 안내'
-                : '의정부 상담·문의 안내'}
+                : '상담·문의 안내'}
               <Icon name="arrow" />
             </Link>
           </div>

@@ -7,11 +7,8 @@ import {
 } from '../../components/ui/ContentUI';
 import { featuredActivities, importantNotices } from '../../data/content';
 import { categoryLink, lifeStages, stageLink } from '../../data/navigation';
-import {
-  ActivityArtwork,
-  ConnectionArtwork,
-  LifeStageArtwork,
-} from './HomeArtwork';
+import { ActivityArtwork, ConnectionArtwork } from './HomeArtwork';
+import { LifeStageArtwork } from '../../components/ui/LifeStageArtwork';
 
 export function Hero() {
   return (
@@ -38,8 +35,8 @@ export function Hero() {
                 <Icon name="arrow" />
               </span>
             </Link>
-            <Link className="hero-secondary" to="/local">
-              의정부 부모연대 안내 <Icon name="diagonal" />
+            <Link className="hero-secondary" to="/about">
+              부모연대 소개 <Icon name="diagonal" />
             </Link>
           </div>
         </div>
@@ -61,8 +58,8 @@ export function Hero() {
 
 const quickServices: { title: string; to: string; icon: IconName }[] = [
   { title: '생애주기별 정보', to: '/support', icon: 'book' },
-  { title: '의정부 부모연대', to: '/local', icon: 'pin' },
-  { title: '상담·문의', to: '/local#contact', icon: 'message' },
+  { title: '부모연대 소개', to: '/about', icon: 'pin' },
+  { title: '상담·문의', to: '/about#contact', icon: 'message' },
   {
     title: '교육·행사',
     to: categoryLink('news', '행사 일정'),

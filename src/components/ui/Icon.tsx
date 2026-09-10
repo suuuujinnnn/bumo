@@ -13,8 +13,16 @@ export type IconName =
   | 'heart'
   | 'people'
   | 'sun'
-  | 'flag';
+  | 'flag'
+  | 'filter'
+  | 'reset'
+  | 'camera'
+  | 'check';
 const paths: Record<IconName, string> = {
+  filter: 'M4 6h16M7 12h10M10 18h4',
+  reset: 'M3 10a9 9 0 1 1 1 8M3 3v7h7',
+  camera: 'M3 6h5l2-3h4l2 3h5v15H3ZM16 13a4 4 0 1 1-8 0 4 4 0 0 1 8 0',
+  check: 'm5 12 4 4L19 6',
   arrow: 'M4 12h16m-6-6 6 6-6 6',
   diagonal: 'M6 18 18 6M6 6h12v12',
   search: 'M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',

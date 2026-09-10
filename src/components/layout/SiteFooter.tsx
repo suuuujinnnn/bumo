@@ -18,8 +18,8 @@ export function SiteFooter() {
           </div>
           <nav aria-label="하단 메뉴">
             <Link to="/about">부모연대 소개</Link>
-            <Link to="/local#contact">문의 안내</Link>
-            <Link to="/local#directions">
+            <Link to="/about#contact">문의 안내</Link>
+            <Link to="/about#directions">
               오시는 길 <Icon name="diagonal" />
             </Link>
           </nav>

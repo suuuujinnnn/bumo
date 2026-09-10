@@ -56,7 +56,7 @@
   white-space: nowrap;
 }
 .hero h1 > span::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 9px;
   left: 0;
@@ -640,7 +640,7 @@
   color: var(--muted);
   margin-top: 13px;
 }
-.local-section > .button {
+.local-section .meet-links {
   font-size: 0.8rem;
   gap: 14px;
   border: 0;
@@ -653,7 +653,7 @@
   border-radius: 44px 44px 0 0;
 }
 .participation-section::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 440px;
   height: 440px;
@@ -832,7 +832,7 @@
   .local-marker {
     width: 130px;
   }
-  .local-section > .button {
+  .local-section .meet-links {
     margin-left: 154px;
   }
   .participation-inner {
@@ -1092,7 +1092,7 @@
   .local-copy h2 {
     font-size: 1.5rem;
   }
-  .local-section > .button {
+  .local-section .meet-links {
     margin: 0;
     width: 100%;
   }
@@ -1134,4 +1134,22 @@
   .quick-services a {
     font-size: 0.72rem;
   }
+}
+.meet-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+.meet-links > div {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.meet-links > div a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.8rem;
 }

@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   FeaturedActivities,
   Hero,
   ImportantNotices,
   LifeStageLinks,
   QuickServices,
-} from '../features/home/HomeSections';
-import { getContent } from '../data/content';
-import { SampleLabel, SectionHeading } from '../components/ui/ContentUI';
-import { Icon } from '../components/ui/Icon';
+} from "../features/home/HomeSections";
+import { getContent } from "../data/content";
+import { SampleLabel, SectionHeading } from "../components/ui/ContentUI";
+import { Icon } from "../components/ui/Icon";
 
 export function HomePage() {
   return (
@@ -27,7 +27,7 @@ export function HomePage() {
             linkLabel="소식 모두 보기"
           />
           <ul className="home-news-list">
-            {getContent('news')
+            {getContent("news")
               .filter((entry) => !entry.status)
               .slice(0, 3)
               .map((entry) => (
@@ -52,9 +52,9 @@ export function HomePage() {
             linkLabel="자료 모두 보기"
           />
           <ul className="home-resource-list">
-            {getContent('resources')
+            {getContent("resources")
               .filter((entry) =>
-                ['정책자료', '교육자료', '쉬운 정보'].includes(entry.category),
+                ["정책자료", "교육자료", "쉬운 정보"].includes(entry.category),
               )
               .map((entry) => (
                 <li key={entry.id}>
@@ -100,17 +100,23 @@ export function HomePage() {
           <span>의정부</span>
         </div>
         <div className="local-copy">
-          <p className="eyebrow">우리 지역에서 이어지는 연대</p>
-          <h2>가까이에서, 함께하는 의정부</h2>
+          <p className="eyebrow">의정부장애인부모연대</p>
+          <h2>부모연대 만나기</h2>
           <p>
-            지역 안내와 문의 경로를 한곳에서 확인하세요.
+            우리가 지향하는 가치와 상담·방문 안내를 만나보세요.
             <br />
             공식 연락처와 방문 정보는 확인 후 안내합니다.
           </p>
         </div>
-        <Link className="button button-secondary" to="/local">
-          의정부 부모연대 안내 <Icon name="arrow" />
-        </Link>
+        <div className="meet-links">
+          <Link className="button button-secondary" to="/about">
+            부모연대 소개 <Icon name="arrow" />
+          </Link>
+          <div>
+            <Link to="/about#contact">상담·문의</Link>
+            <Link to="/about#directions">오시는 길</Link>
+          </div>
+        </div>
       </section>
       <section className="participation-section">
         <div className="container participation-inner">

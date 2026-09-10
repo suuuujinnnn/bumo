@@ -19,17 +19,6 @@ export function SiteHeader() {
         }
       }}
     >
-      <div className="utility-bar">
-        <div className="container">
-          <span>함께 알고, 함께 바꾸는 일상</span>
-          <div className="utility-links">
-            <Link to="/support">지원정보 찾기</Link>
-            <Link to="/local">
-              의정부 부모연대 안내 <Icon name="diagonal" />
-            </Link>
-          </div>
-        </div>
-      </div>
       <div className="header-main container">
         <Link className="brand" to="/" aria-label="의정부장애인부모연대 홈">
           <span className="brand-location">의정부</span>
@@ -70,11 +59,6 @@ export function SiteHeader() {
             <Icon name={mobileOpen ? 'close' : 'menu'} />
           </button>
         </div>
-      </div>
-      <div className="mobile-shortcuts">
-        <Link to="/support">지원정보 찾기</Link>
-        <Link to="/local">의정부 안내</Link>
-        <Link to="/participate">후원·회원 안내</Link>
       </div>
       <SearchPanel dialogRef={dialogRef} triggerRef={searchRef} />
     </header>
