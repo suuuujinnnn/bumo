@@ -14,10 +14,10 @@ export function ConnectionArtwork() {
             y2="410"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#effbd5" />
-            <stop offset=".4" stopColor="#c5e8ac" />
-            <stop offset=".8" stopColor="#95bd85" />
-            <stop offset="1" stopColor="#cce5b1" />
+            <stop stopColor="#fff0ad" />
+            <stop offset=".4" stopColor="#ffda68" />
+            <stop offset=".8" stopColor="#f2ac32" />
+            <stop offset="1" stopColor="#ffe48b" />
           </linearGradient>
           <linearGradient
             id="ring-green"
@@ -27,21 +27,21 @@ export function ConnectionArtwork() {
             y2="470"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#539978" />
-            <stop offset=".32" stopColor="#2b7056" />
-            <stop offset=".75" stopColor="#15503e" />
-            <stop offset="1" stopColor="#38775c" />
+            <stop stopColor="#ff9676" />
+            <stop offset=".32" stopColor="#f2694f" />
+            <stop offset=".75" stopColor="#d84d38" />
+            <stop offset="1" stopColor="#fa8060" />
           </linearGradient>
           <radialGradient id="art-glow">
-            <stop stopColor="#f9fce7" />
-            <stop offset="1" stopColor="#e8eedf" stopOpacity="0" />
+            <stop stopColor="#fff8e0" />
+            <stop offset="1" stopColor="#ffeadb" stopOpacity="0" />
           </radialGradient>
           <filter id="ring-shadow" x="-40%" y="-40%" width="190%" height="200%">
             <feDropShadow
               dx="4"
               dy="17"
               stdDeviation="12"
-              floodColor="#36513b"
+              floodColor="#a95a36"
               floodOpacity=".12"
             />
           </filter>
@@ -51,14 +51,14 @@ export function ConnectionArtwork() {
           cx="284"
           cy="267"
           r="216"
-          stroke="#bdcdb5"
+          stroke="#ebbc8a"
           strokeDasharray="3 9"
         />
         <circle
           cx="284"
           cy="267"
           r="253"
-          stroke="#cbd5bd"
+          stroke="#f1cbaa"
           strokeOpacity=".55"
         />
         <ellipse
@@ -66,7 +66,7 @@ export function ConnectionArtwork() {
           cy="476"
           rx="139"
           ry="13"
-          fill="#436642"
+          fill="#a95a36"
           opacity=".07"
         />
         <g transform="rotate(-34 280 265)" filter="url(#ring-shadow)">
@@ -95,27 +95,27 @@ export function ConnectionArtwork() {
           />
           <path
             d="M177 143a59 59 0 0 1 58-60"
-            stroke="#f3ffe6"
+            stroke="#fff9dc"
             strokeOpacity=".6"
             strokeWidth="3"
             strokeLinecap="round"
           />
           <path
             d="M387 384a59 59 0 0 1-58 66"
-            stroke="#7ca78b"
+            stroke="#ffbaa0"
             strokeOpacity=".55"
             strokeWidth="3"
             strokeLinecap="round"
           />
         </g>
-        <circle cx="443" cy="105" r="28" fill="#f0bda0" />
+        <circle cx="443" cy="105" r="28" fill="#ffd35b" />
         <path
           d="M99 343v30m-15-15h30m-25-10 21 21m0-21-21 21"
-          stroke="#538263"
+          stroke="#c75b35"
           strokeWidth="3"
           strokeLinecap="round"
         />
-        <circle cx="417" cy="420" r="7" fill="#699277" />
+        <circle cx="417" cy="420" r="7" fill="#e58845" />
       </svg>
       <div className="art-note art-note-information">
         <span>
@@ -149,13 +149,13 @@ export function ActivityArtwork({ variant }: { variant: number }) {
       <svg viewBox="0 0 400 280" aria-hidden="true" fill="none">
         {variant === 0 ? (
           <>
-            <circle cx="338" cy="230" r="128" fill="#d5e8b9" />
+            <circle cx="338" cy="230" r="128" fill="#ffe190" />
             <path
               d="M264 65v109a57 57 0 0 0 114 0V65"
-              stroke="#91b686"
+              stroke="#f5a444"
               strokeWidth="42"
             />
-            <circle cx="250" cy="65" r="11" fill="#e8f4d7" />
+            <circle cx="250" cy="65" r="11" fill="#fff3cb" />
           </>
         ) : variant === 1 ? (
           <>

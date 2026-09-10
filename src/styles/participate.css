@@ -20,7 +20,7 @@
   margin: 24px 0;
 }
 .join-design-intro > p:last-of-type {
-  color: #526456;
+  color: #684338;
 }
 .join-design-jumps {
   display: flex;
@@ -33,20 +33,20 @@
   align-items: center;
   gap: 12px;
   min-height: 44px;
-  border-bottom: 1px solid #9dac99;
+  border-bottom: 1px solid #84604d;
   text-decoration: none;
 }
 .join-design-jumps a span {
   font-size: 0.7rem;
-  color: #526456;
+  color: #684338;
 }
 .join-design-jumps a:hover {
-  color: #1c653e;
+  color: #684338;
   border-color: currentColor;
 }
 .join-design-section {
   scroll-margin-top: 24px;
-  --art-accent: #b6c997;
+  --art-accent: #f4c39b;
 }
 .join-design-section-inner {
   width: min(1280px, calc(100% - 80px));
@@ -104,7 +104,7 @@
 }
 .join-design-visual {
   text-align: center;
-  color: #416b48;
+  color: #684338;
 }
 .join-design-visual > span {
   display: block;
@@ -146,7 +146,7 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: #abb99c;
+  background: #f4c39b;
 }
 .join-design-story .join-design-section-inner {
   position: relative;
@@ -164,7 +164,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #2e5e45;
+  background: #684338;
   color: #fff;
   font-size: 0.8rem;
 }
@@ -176,7 +176,7 @@
 }
 .join-design-story .join-design-visual {
   border-radius: 50%;
-  background: #e8eedf;
+  background: #fff7ec;
   padding: 20px;
 }
 .join-design-story .join-design-visual > span {

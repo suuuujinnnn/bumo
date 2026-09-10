@@ -1,7 +1,10 @@
 .site-header {
-  background: #fbfaf6;
+  background: #fffcf7;
   position: relative;
   z-index: 5;
+}
+.site-header-home {
+  background: var(--home-background);
 }
 .header-main {
   padding-block: 24px;
@@ -9,7 +12,7 @@
   grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas: "brand navigation actions";
   align-items: center;
-  gap: 36px;
+  gap: 20px;
 }
 .brand {
   grid-area: brand;
@@ -21,9 +24,9 @@
   line-height: 1.2;
 }
 .brand-location {
-  font-size: 0.67rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: -0.035em;
   margin-bottom: 4px;
 }
 .brand-name {
@@ -33,6 +36,23 @@
 }
 .brand-dot {
   color: var(--teal);
+}
+.brand { min-width: 0; }
+.brand-location { line-height: 1.5; }
+.affiliation { padding-bottom: 28px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
+.affiliation ol { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.affiliation li { display: flex; align-items: center; gap: 14px; }
+.affiliation li + li::before { content: '→'; color: var(--muted); }
+.affiliation li a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; font-weight: 700; color: var(--ink); }
+.affiliation li:last-child a { padding: 6px 18px; border-radius: 100px; background: var(--lime); }
+.affiliation a:hover { color: var(--teal); text-decoration: underline; }
+.affiliation-cafe { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 12px; color: var(--teal); font-size: 0.8rem; }
+.guide-sections .affiliation { margin-top: 24px; margin-bottom: 0; border: 0; padding: 24px; background: var(--paper); border-radius: 20px; }
+@media (max-width: 767px) {
+  .affiliation ol { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .affiliation li + li::before { content: '↳'; }
+  .affiliation li:last-child { margin-left: 24px; }
+  .footer-brand { display: block; max-width: 26ch; line-height: 1.6; }
 }
 .header-actions {
   grid-area: actions;
@@ -58,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 22px;
+  gap: 6px;
 }
 .site-navigation > ul > li > a {
   display: block;
@@ -72,14 +92,14 @@
   background: var(--pale);
 }
 .site-navigation > ul > li > a[aria-current="page"] {
-  background: #e9f0de;
+  background: #fff7ec;
   color: var(--teal);
 }
 .menu-toggle {
   display: none !important;
 }
 .site-footer {
-  background: #f0f1e9;
+  background: #fff7ec;
   padding: 60px 0 26px;
   font-size: 0.82rem;
   color: var(--muted);
@@ -129,7 +149,7 @@
   text-align: right;
 }
 .footer-bottom {
-  border-top: 1px solid #d4dccd;
+  border-top: 1px solid #ffe7cc;
   padding-top: 22px;
   display: flex;
   justify-content: space-between;

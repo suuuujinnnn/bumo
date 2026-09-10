@@ -4,6 +4,7 @@ import { Breadcrumbs } from "../components/ui/ContentUI";
 import { PageIntro } from "../components/ui/PageIntro";
 import { Icon, type IconName } from "../components/ui/Icon";
 import { ParticipatePage } from "./ParticipatePage";
+import { Affiliation } from "../components/layout/Affiliation";
 
 const sectionIcons: Record<string, IconName> = {
   values: "sun",
@@ -35,7 +36,7 @@ export function GuidePage({ kind }: { kind: keyof typeof guides }) {
               {guide.sections.map((section) => (
                 <Link key={section.id} to={`/${kind}#${section.id}`}>
                   <Icon name={sectionIcons[section.id] || "book"} />
-                  {section.title}
+                  {section.id === "introduction" ? "의정부시지회 소개" : section.title}
                   <Icon name="arrow" />
                 </Link>
               ))}
@@ -58,6 +59,7 @@ export function GuidePage({ kind }: { kind: keyof typeof guides }) {
               </div>
               <h2>{section.title}</h2>
               <p>{section.text}</p>
+              {kind === "about" && section.id === "organization" && <Affiliation />}
               {kind === "about" && section.id === "values" && (
                 <ul className="value-labels">
                   <li>권리의 주체</li>

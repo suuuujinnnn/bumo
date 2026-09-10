@@ -17,7 +17,10 @@ export function SiteLayout() {
       >
         본문 바로가기
       </a>
-      <SiteHeader key={location.pathname + location.search + location.hash} />
+      <SiteHeader
+        key={location.pathname + location.search + location.hash}
+        isHome={location.pathname === '/'}
+      />
       <main id="main-content" tabIndex={-1}>
         <Outlet />
       </main>

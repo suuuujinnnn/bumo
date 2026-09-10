@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Icon } from '../ui/Icon';
+import { Affiliation } from './Affiliation';
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container">
+        <Affiliation />
         <div className="footer-top">
           <div>
             <Link className="footer-brand" to="/">
-              의정부장애인부모연대
+              사단법인 경기장애인부모연대 의정부시지회
             </Link>
             <p>
               장애인의 권리, 가족의 삶.
@@ -38,7 +40,7 @@ export function SiteFooter() {
           </p>
         </div>
         <div className="footer-bottom">
-          <span>의정부장애인부모연대</span>
+          <span>사단법인 경기장애인부모연대 의정부시지회</span>
           <span>함께 알고, 함께 바꾸는 일상</span>
         </div>
       </div>

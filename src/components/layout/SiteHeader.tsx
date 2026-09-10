@@ -4,14 +4,14 @@ import { Icon } from '../ui/Icon';
 import { SearchPanel } from './SearchPanel';
 import { SiteNavigation } from './SiteNavigation';
 
-export function SiteHeader() {
+export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const searchRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLButtonElement>(null);
   return (
     <header
-      className="site-header"
+      className={`site-header${isHome ? ' site-header-home' : ''}`}
       onKeyDown={(event) => {
         if (event.key === 'Escape' && mobileOpen) {
           setMobileOpen(false);
@@ -20,10 +20,10 @@ export function SiteHeader() {
       }}
     >
       <div className="header-main container">
-        <Link className="brand" to="/" aria-label="의정부장애인부모연대 홈">
-          <span className="brand-location">의정부</span>
+        <Link className="brand" to="/" aria-label="사단법인 경기장애인부모연대 의정부시지회 홈">
+          <span className="brand-location">사단법인 경기장애인부모연대</span>
           <span className="brand-name">
-            장애인부모연대
+            의정부시지회
             <span className="brand-dot" aria-hidden="true">
               .
             </span>

@@ -20,7 +20,7 @@ function RouteEffects() {
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       const title = document.querySelector("main h1");
-      document.title = `${title?.textContent || "페이지 안내"} | 의정부장애인부모연대`;
+      document.title = `${title?.textContent || "페이지 안내"} | 사단법인 경기장애인부모연대 의정부시지회`;
       const section = hash ? document.getElementById(hash.slice(1)) : null;
       if (section) {
         section.focus({ preventScroll: true });

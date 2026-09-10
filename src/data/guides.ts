@@ -9,7 +9,7 @@ export const guides: Record<"about" | "participate", Guide> = {
     sections: [
       {
         id: "introduction",
-        title: "의정부장애인부모연대",
+        title: "사단법인 경기장애인부모연대 의정부시지회",
         text: "장애인과 가족이 필요한 정보를 찾고, 권리를 위한 활동에 함께할 수 있도록 소개와 안내를 준비합니다.",
         pending: "기관 소개 문안 예시 · 공식 기관 소개 추후 입력",
         link: { label: "생애주기별 지원정보 찾기", to: "/support" },
@@ -24,13 +24,13 @@ export const guides: Record<"about" | "participate", Guide> = {
       {
         id: "history",
         title: "연혁",
-        text: "의정부장애인부모연대가 걸어온 길을 확인된 기록을 바탕으로 소개할 예정입니다.",
+        text: "사단법인 경기장애인부모연대 의정부시지회가 걸어온 길을 확인된 기록을 바탕으로 소개할 예정입니다.",
         pending: "설립일·주요 연혁 추후 입력",
       },
       {
         id: "organization",
         title: "조직",
-        text: "함께하는 사람들과 조직의 역할을 소개할 예정입니다.",
+        text: "전국장애인부모연대에서 경기도장애인부모연대, 의정부시지회로 이어집니다. 우리 지역에서 장애인과 가족의 목소리를 함께 나눕니다.",
         pending: "공식 조직 구성 추후 입력",
       },
       {

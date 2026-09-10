@@ -17,16 +17,16 @@ export function Hero() {
         <div className="hero-copy">
           <p className="hero-kicker">
             <span aria-hidden="true" />
-            서로를 잇는 힘, 의정부장애인부모연대
+            의정부의 장애인 가족과 함께합니다
           </p>
           <h1 tabIndex={-1}>
-            서로의 오늘을 잇고,
+            혼자 고민하지 않도록,
             <br />
-            <span>함께의 내일</span>을 엽니다.
+            <span>우리 곁의 연결</span>을 만듭니다.
           </h1>
           <p className="hero-description">
-            장애인 가족에게 필요한 정보를 연결하고,
-            <br className="desktop-break" /> 장애인의 권리를 함께 만들어갑니다.
+            아이의 성장부터 가족의 일상까지,
+            <br className="desktop-break" /> 필요한 정보를 찾고, 서로의 힘이 되어주세요.
           </p>
           <div className="hero-buttons">
             <Link className="button button-primary" to="/support">

@@ -100,7 +100,7 @@ export function HomePage() {
           <span>의정부</span>
         </div>
         <div className="local-copy">
-          <p className="eyebrow">의정부장애인부모연대</p>
+          <p className="eyebrow">사단법인 경기장애인부모연대 의정부시지회</p>
           <h2>부모연대 만나기</h2>
           <p>
             우리가 지향하는 가치와 상담·방문 안내를 만나보세요.
