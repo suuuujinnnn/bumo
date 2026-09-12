@@ -4,10 +4,11 @@
   z-index: 5;
 }
 .site-header-home {
-  background: var(--home-background);
+  background: #fffcf7;
+  border-bottom: 1px solid var(--line);
 }
 .header-main {
-  padding-block: 24px;
+  padding-block: 12px;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas: "brand navigation actions";
@@ -17,7 +18,8 @@
 .brand {
   grid-area: brand;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 0;
   align-items: flex-start;
   text-decoration: none;
   color: var(--navy);
@@ -37,6 +39,20 @@
 .brand-dot {
   color: var(--teal);
 }
+.brand-logo {
+  width: 116px;
+  height: 52px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 0;
+}
+.brand-logo-frame {
+  width: 70px;
+  height: 52px;
+  flex: 0 0 70px;
+  overflow: hidden;
+}
+.brand-copy { display: flex; flex-direction: column; min-width: 0; }
 .brand { min-width: 0; }
 .brand-location { line-height: 1.5; }
 .affiliation { padding-bottom: 28px; margin-bottom: 30px; border-bottom: 1px solid var(--line); }
@@ -49,6 +65,8 @@
 .affiliation-cafe { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; margin-top: 12px; color: var(--teal); font-size: 0.8rem; }
 .guide-sections .affiliation { margin-top: 24px; margin-bottom: 0; border: 0; padding: 24px; background: var(--paper); border-radius: 20px; }
 @media (max-width: 767px) {
+  .brand-logo { width: 94px; height: 44px; }
+  .brand-logo-frame { width: 58px; height: 44px; flex-basis: 58px; }
   .affiliation ol { align-items: flex-start; flex-direction: column; gap: 4px; }
   .affiliation li + li::before { content: '↳'; }
   .affiliation li:last-child { margin-left: 24px; }
@@ -78,22 +96,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 18px;
 }
 .site-navigation > ul > li > a {
-  display: block;
-  padding: 12px 13px;
-  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
   font-size: 0.86rem;
   font-weight: 700;
   text-decoration: none;
 }
 .site-navigation > ul > li > a:hover {
-  background: var(--pale);
+  color: var(--teal);
+  border-color: #e9b48c;
 }
 .site-navigation > ul > li > a[aria-current="page"] {
-  background: #fff7ec;
   color: var(--teal);
+  border-color: var(--teal);
 }
 .menu-toggle {
   display: none !important;
@@ -179,7 +200,7 @@
     grid-template-columns: 1fr auto;
     grid-template-areas: "brand actions" "navigation navigation";
     gap: 0 20px;
-    padding-block: 20px;
+    padding-block: 14px;
   }
   .header-donate {
     display: none !important;
@@ -199,7 +220,8 @@
   }
   .site-navigation > ul > li > a {
     flex: 1;
-    padding: 14px 6px;
+    padding: 10px 6px;
+    border-bottom: 0;
     font-size: 0.95rem;
   }
 }

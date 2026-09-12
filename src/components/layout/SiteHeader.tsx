@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from '../ui/Icon';
 import { SearchPanel } from './SearchPanel';
 import { SiteNavigation } from './SiteNavigation';
+import regionalLogo from '../../../docs/경기도장애인부모연대.svg';
 
 export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,11 +22,13 @@ export function SiteHeader({ isHome = false }: { isHome?: boolean }) {
     >
       <div className="header-main container">
         <Link className="brand" to="/" aria-label="사단법인 경기장애인부모연대 의정부시지회 홈">
-          <span className="brand-location">사단법인 경기장애인부모연대</span>
-          <span className="brand-name">
-            의정부시지회
-            <span className="brand-dot" aria-hidden="true">
-              .
+          <span className="brand-logo-frame">
+            <img className="brand-logo" src={regionalLogo} alt="경기도장애인부모연대" />
+          </span>
+          <span className="brand-copy">
+            <span className="brand-location">사단법인 경기장애인부모연대</span>
+            <span className="brand-name">
+              의정부시지회
             </span>
           </span>
         </Link>

@@ -20,7 +20,10 @@ npm run typecheck
 npm run lint
 npm run build
 npm run preview
+npm run export:single
 ```
+
+`npm run export:single`은 CSS·JavaScript·경기도장애인부모연대 로고를 모두 포함한 `dist/index.html` 하나를 만듭니다. 이 파일만 공유하거나 열면 됩니다.
 
 빌드 결과는 `dist/`에 생성됩니다. HTTP 정적 서버에서 제공해야 하며 `index.html`을 파일로 직접 여는 방식은 지원하지 않습니다. `HashRouter`와 상대 에셋 경로를 사용하므로 하위 경로에서도 서버의 SPA 경로 재작성 설정 없이 화면 이동·새로고침이 가능합니다.
 
